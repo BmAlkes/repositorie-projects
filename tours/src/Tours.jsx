@@ -1,5 +1,19 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 
-export const Tours = () => {
-  return <h2>Tours</h2>;
+import { Tour } from "./Tour";
+
+export const Tours = ({ tours, removeTours }) => {
+  return (
+    <section>
+      <div className="title">
+        <h2>Our Tours</h2>
+        <div className="title-underline"></div>
+      </div>
+      <div className="tours">
+        {tours.map((tour) => {
+          return <Tour key={tour.id} {...tour} removeTours={removeTours} />;
+        })}
+      </div>
+    </section>
+  );
 };
