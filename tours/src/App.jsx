@@ -48,7 +48,7 @@ const App = () => {
             className="btn"
             onClick={fetchTours}
           >
-            search tour
+            Refresh
           </button>
         </div>
       </main>
