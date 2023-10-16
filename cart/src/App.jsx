@@ -1,0 +1,22 @@
+import CartContainer from "./CartContainer";
+import Navbar from "./Navbar";
+import { useGlobalContext } from "./context";
+
+const App = () => {
+  const { loading } = useGlobalContext();
+  console.log(loading);
+  if (loading) {
+    return (
+      <main>
+        <div className="loading" style={{ marginTop: "6rem" }}></div>
+      </main>
+    );
+  }
+  return (
+    <main>
+      <Navbar />
+      <CartContainer />
+    </main>
+  );
+};
+export default App;
